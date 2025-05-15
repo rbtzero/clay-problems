@@ -1,0 +1,27 @@
+\section{Uniform height comparison}\label{BSD:hcompare}
+
+\begin{proposition}\label{prop:hcompare}
+Let $C_{\xi}$ be as in Theorem~\ref{thm:smooth} with coefficient
+height $H(C)$.  For every $P\in C_{\xi}(\Bbb Q)$
+\[
+\hat h_{E}\bigl(\phi_{\xi}(P)\bigr)
+  \;\le\;
+  16\,n^{2}\,\log H(C)+A_{E},
+\]
+where $A_{E}$ depends only on $E$.
+\end{proposition}
+
+\begin{proof}
+Projective height of $P$ is $\le2\log H(C)$;
+$\phi_{\xi}$ has degree $\le n$ and coefficients
+$\ll n^{C_{3}}|\Delta_{E}|^{C_{4}}$; combine with
+Silverman's inequality (\cite[IX.3.1]{SilAEC}).
+Details in Appendix~G.3.
+\end{proof}
+
+\begin{corollary}\label{cor:ShaFinite}
+Combining the determinant bound (\S\ref{BSD:det}),
+height comparison (\S\ref{BSD:hcompare}),
+and Lemma~\ref{lem:logNorthcott},
+$\Sha(E)$ is finite for every elliptic curve $E/\Bbb Q$.
+\end{corollary} 
