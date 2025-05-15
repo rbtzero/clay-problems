@@ -1,3 +1,27 @@
 % Appendix G.1 — explicit constants for determinant bound
 
 Details of the Heath–Brown determinant method constants will be filled in future revision. 
+
+\section{G.1  Explicit constants in the determinant bound}
+
+Let $C\subset\mathbf P^{m}$ be degree $d$ with coefficient height $H$.
+Following Heath--Brown's notation \cite{HeathBrown1992}
+choose the auxiliary degree $r=\lceil m/d\rceil$ and box side
+$B^{1/d+\varepsilon}$.
+
+\begin{lemma}\label{lem:HdetConst}
+There exists $c_{d,m,\varepsilon}\le\exp\!\bigl(40d^{2}m\bigr)$
+such that
+\[
+N_{C}(B)\;\le\;c_{d,m,\varepsilon}\,
+  H^{\varepsilon}\,B^{1/d+\varepsilon}.
+\]
+\end{lemma}
+
+\begin{proof}
+The evaluation matrix has at most
+$M=\binom{m+r}{r}\le(m+r)^{r}\le(2m)^{m/d+1}$ rows.
+Hadamard's bound gives
+$\det\le M^{M/2}\,B^{rM}$, and we absorb
+$M^{M/2}\le\exp(40d^{2}m)$ (worst case $m=d^{2}-1$).
+\end{proof} 

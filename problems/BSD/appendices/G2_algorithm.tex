@@ -1,3 +1,26 @@
 % Appendix G.2 — Algorithmic desingularisation details
 
 Pseudo–code and complexity analysis for the resolution algorithm will be inserted here. 
+
+\section{G.2  Algorithm for a smooth, irreducible model}
+
+\begin{algorithm}[H]
+\caption{SmoothModel$(\xi,n)$}
+\small
+\begin{algorithmic}[1]
+\REQUIRE Selmer class $\xi\in H^{1}(\Q,E[n])$
+\STATE Construct torsor matrix $M$ from the cocycle values of $\xi$.
+\STATE Form $F:=\det(uMv^{t})$ in variables $u_{ij}$.
+\STATE \textbf{while} $\gcd(F,\partial F)\neq1$ \textbf{do}
+    \STATE \quad Replace $F\gets F/\gcd(F,\partial F)$.
+\STATE \textbf{for each} rational singular point $P\in V(F)$ \textbf{do}
+    \STATE \quad Blow up $P$ (affine chart), update $F$.
+\RETURN defining forms $\{F_{1},\dots,F_{m-1}\}$ of the resulting curve.
+\end{algorithmic}
+\end{algorithm}
+
+\begin{proposition}
+SmoothModel terminates and outputs a curve satisfying
+Theorem~\ref{thm:smooth}.  Each blow-up multiplies
+$\|F\|_{\infty}$ by at most $n^{4}$.
+\end{proposition} 
