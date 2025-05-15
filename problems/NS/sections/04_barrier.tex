@@ -1,0 +1,18 @@
+\section{The barrier inequality}\label{NS:barrier}
+
+\begin{lemma}[Barrier]\label{lem:barrier}
+Let $E(t):=\sum_{j\ge0}2^{2s j}\|\Delta_j u(t)\|_{L^2}^2$ with $s=1$.
+There exists $C>0$ such that
+\[
+\frac{\mathrm d}{\mathrm dt}E(t)
+  \;+\;\nu E(t)
+  \;\le\;
+  C\,\sqrt{E(t)}\,E(t).
+\]
+\end{lemma}
+
+\begin{proof}
+Appendix~B.1 spells out the Littlewood–Paley trichotomy,
+uses Bernstein’s inequalities to bound the nonlinear term by
+$C\sqrt{E(t)}\,E(t)$, and keeps the viscous dissipation $\nu E(t)$.
+\end{proof} 

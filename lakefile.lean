@@ -16,7 +16,8 @@ lean_lib ClayRH where
 -- Navier–Stokes stub
 lean_lib ClayNS where
   srcDir := "problems/NS/ns_lean"
-  globs := #[`Energy]
+  -- Include all Navier–Stokes skeleton modules
+  globs := #[`Full]
 
 -- Yang–Mills stub
 lean_lib ClayYM where

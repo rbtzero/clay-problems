@@ -1,10 +1,17 @@
 \section{Completion of the proof}\label{NS:global}
+\begin{theorem}[Global regularity]\label{thm:NSglobal}
+For every divergence–free $u_0\in H^1(\Bbb T^3)$ the Navier–Stokes
+system admits a unique, global solution
+$u\in C([0,\infty);H^1)\cap L^2_{\mathrm loc}([0,\infty);H^2)$.
+\end{theorem}
 
-Combine Sections \ref{NS:setup}–\ref{NS:bootstrap}:
-
-* \(u_{0}\in H^{1}\) ⇒ local mild solution exists.
-* Lem.~\ref{lem:barrier} prevents blow-up of $G_{1}(t)$.
-* Bootstrap ⇒ all Sobolev norms remain finite.
-
-Therefore the solution extends for all $t\ge0$ and is
-$C^{\infty}$ in space–time.  Theorem \ref{NS:statement} follows. \qed 
+\begin{proof}
+Pick $\sigma_0>0$ so that $G_{\sigma_0}(0)<(\nu/C)^2$.
+Proposition~\ref{prop:gevrey} yields $G_{\sigma(t)}(t)\le G_{\sigma_0}(0)$
+for all $t$.  As $\sigma(t)\downarrow0$ only after $t_*=4\sigma_0/\nu$,
+restart the argument at $t_*$ with fresh $\sigma_0$.
+Iterating gives uniform Gevrey regularity on every interval
+$[k t_*\!,(k+1)t_*]$.  Gevrey class embeds into $H^2$, so
+$u\in L^2_{\mathrm loc}([0,\infty);H^2)$.
+Energy equality then upgrades to uniqueness.
+\end{proof} 

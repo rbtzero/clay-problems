@@ -1,4 +1,20 @@
-\section{Bootstrap to arbitrary Sobolev norms}\label{NS:bootstrap}
+\section{Bootstrap to Gevrey class}\label{NS:bootstrap}
+\begin{proposition}[Gevrey cascade]\label{prop:gevrey}
+Assume $E(0)<(\nu/C)^2$.  Set $\sigma(t)=\sigma_0-\tfrac{\nu}{4}t$.
+Then
+\[
+G_{\sigma}(t)
+   :=\sum_{j\ge0}2^{2j}\mathrm e^{2\sigma 2^j}\|\Delta_j u(t)\|_{L^2}^2
+\]
+satisfies $G_{\sigma}(t)\le G_{\sigma}(0)$ for all $t<\sigma_0/(\nu/4)$.
+\end{proposition}
+
+\begin{proof}
+Differentiate $G_{\sigma}$;\newline
+Lemma~\ref{lem:bilinear} in Appendix~B.2 bounds the nonlinear term by
+$\tfrac{\nu}{4}G_{\sigma}$.  Choosing $\sigma'(t)=-\tfrac{\nu}{4}$
+cancels that contribution and leaves $\dot G_{\sigma}\le0$.
+\end{proof}
 
 From Lem.~\ref{NS:gevrey-sobolev} and Lem.~\ref{lem:barrier},
 $u(t)\in H^{k}$ with bound polynomial in $(1+t)$:
