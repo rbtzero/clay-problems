@@ -22,3 +22,20 @@ $\beta_{0}(N)$ & Critical coupling & $7$ (for $\mathrm{SU}(N)$)\\
 All inequalities in Sections~\ref{YM:cluster}--\ref{YM:gap} are
 verified with these values by elementary calculus or numeric checks.
 \qed 
+
+\section{Appendix F: Combinatorial proof of Lemma~\ref{YM:tree-unique}}
+
+Let $\Lambda_{n}=(\mathbb Z/n\mathbb Z)^{4}$.\
+Define the axial tree $\mathcal T$ as in Section~\ref{YM:axial}.\
+Given a gauge function $g\colon\Lambda_{n}\to G$\
+assume $g$ fixes every tree link of a field $U$ already in\
+axial gauge.  Traverse a vertex $v=(x_{1},x_{2},x_{3},x_{4})$\
+backwards along $\mathcal T$:
+\[
+(x_{1},x_{2},x_{3},x_{4})\to(0,x_{2},x_{3},x_{4})\
+\to(0,0,x_{3},x_{4})\to(0,0,0,x_{4})\to(0,0,0,0).
+\]
+Each step crosses a tree link where $g$ acts trivially, hence\
+$g(v)=g(0,0,0,0)$.  Periodicity forces $g(0,0,0,0)=1$, so $g$ is the\
+identity.  Therefore the axial representative is unique.\
+\qed 
