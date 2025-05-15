@@ -1,15 +1,15 @@
-name: RH verification
+name: monograph verification
 
 on:
   push:
     branches: [ main, rh-dev, '**' ]
     paths:
-      - problems/RH/**
+      - problems/**
       - .github/workflows/rh-ci.yml
       - preamble.tex
   pull_request:
     paths:
-      - problems/RH/**
+      - problems/**
       - preamble.tex
 
 jobs:
@@ -42,5 +42,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Set up Lean
         uses: leanprover/lean-action@v1
-      - name: Check Ledger.lean
-        run: lean problems/RH/rh_lean/Ledger.lean 
+      - name: Check Lean stubs (RH, NS)
+        run: |
+          lean problems/RH/rh_lean/Ledger.lean
+          lean problems/NS/ns_lean/Energy.lean 
