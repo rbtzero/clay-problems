@@ -40,9 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Lean
-        uses: leanprover/lean-action@v1
+      - name: Install Lean toolchain (elan)
+        uses: leanprover/elan-action@v1
+        with:
+          toolchain: leanprover/lean4:stable
       - name: Check Lean stubs (RH, NS)
         run: |
-          lean problems/RH/rh_lean/Ledger.lean
-          lean problems/NS/ns_lean/Energy.lean 
+          lean -Dpp.unicode=true problems/RH/rh_lean/Ledger.lean
+          lean -Dpp.unicode=true problems/NS/ns_lean/Energy.lean 
