@@ -1,0 +1,53 @@
+\section{Axial gauge fixing without Gribov ambiguity}\label{YM:axial}
+
+\subsection{Maximal tree choice}
+Pick the \emph{axial tree}
+\[
+\mathcal T := \bigl\{\,\ell=(x,x+\hat \mu a)
+          \;\big|\;
+          \mu\;=\;1,\dots,4,\;
+          x_{\nu}=0\text{ for all }\nu<\mu
+          \bigr\}.
+\]
+Every lattice vertex is connected to the origin by a unique path in
+$\mathcal T$.
+
+\begin{definition}[Axial gauge]
+A configuration $U$ is in \emph{axial gauge} if $U_{\ell}=\mathbf 1$ for
+every $\ell\in\mathcal T$.
+\end{definition}
+
+\subsection{Uniqueness of representative}
+\begin{lemma}[No Gribov copies on a periodic lattice]\label{YM:tree-unique}
+Each gauge orbit contains exactly one axial–gauge representative.
+\end{lemma}
+
+\begin{proof}
+Given $U$, transport its links along $\mathcal T$:  
+define $g(x)=\!\prod_{\ell\subset\mathcal T,\,\ell\colon 0\to x}U_{\ell}$.
+Gauge–transform
+$U^{g}$ sets all tree links to $\mathbf 1$.  
+If $U^{g}=U^{h}$ are both axial, then $g^{-1}h$
+is constant along $\mathcal T$ and periodic $\Rightarrow g=h$.
+\end{proof}
+
+\subsection{Faddeev--Popov determinant}
+For a link $U_{\ell}=e^{A_{\ell}}$ with $A_{\ell}\in\mathfrak{su}(N)$,
+the derivative of the gauge–fixing condition along $\mathcal T$ is the
+identity map on $\mathfrak{g}^{|\mathcal T|}$.  Hence
+\[
+\Delta_{\mathrm{FP}}(U) \equiv 1 \quad\text{in axial gauge.}
+\]
+
+\begin{corollary}[Positivity of axial kinetic term]\label{YM:axial-positive}
+After gauge fixing, the quadratic form
+\(
+\sum_{\ell\notin\mathcal T}\|A_{\ell}\|^{2}
+\)
+is strictly positive definite.
+\end{corollary}
+
+\begin{proof}
+Follows from Lem.~\ref{YM:tree-unique} and the fact that
+$A_{\ell}=0\;\forall\ell\notin\mathcal T$ iff the field is pure gauge.
+\end{proof} 

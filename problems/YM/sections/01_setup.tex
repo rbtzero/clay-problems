@@ -1,0 +1,30 @@
+\section{Wilson lattice gauge theory and notation}\label{YM:setup}
+
+\subsection{Lattice and action}
+Let $a>0$ be the lattice spacing, $\Lambda_{L}=(a\mathbb Z/L\mathbb Z)^{4}$
+with periodic boundary.  Link variables
+$U_{\ell}\in G$, plaquette $U_{\square}$.
+Wilson action
+\[
+S_{\beta}(U) = \beta \sum_{\square}
+  \bigl(1-\tfrac1N\Re\,\operatorname{tr}U_{\square}\bigr),
+\qquad \beta=\frac{2N}{g^{2}}.
+\]
+
+\subsection{Polymer decomposition scale hierarchy}
+Fix $M\in 4\mathbb N$ and set scales
+$a_{n}=M^{n}a$, boxes
+$B_{n}(x)=x+[0,a_{n})^{4}$.  Balaban's multi–scale analysis expands the
+partition function into \emph{polymers} $\mathcal P_{n}$, connected sets
+of $B_{n}$ boxes.
+
+\begin{definition}[Polymer weight]
+For configuration $U$ and scale $n$,
+\(
+w_{n}(\mathcal P_{n}) := 
+  \int\!\exp(-S_{\beta}(U))\,
+  \prod_{B_{n}\subset\mathcal P_{n}}\!dU_{B_{n}}.
+\)
+\end{definition}
+
+Controlling $w_{n}$ uniformly in $n$ is the heart of the mass–gap proof. 

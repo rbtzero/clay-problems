@@ -48,4 +48,5 @@ jobs:
       - name: Check Lean stubs (RH, NS)
         run: |
           lean problems/RH/rh_lean/Ledger.lean
-          lean problems/NS/ns_lean/Energy.lean 
+          lean problems/NS/ns_lean/Energy.lean
+          lean problems/YM/ym_lean/AxialPositivity.lean 
