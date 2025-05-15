@@ -1,0 +1,22 @@
+\section{Ledger-weight spectrum}\label{RH:ledger}
+
+\begin{lemma}[Ledger transform]\label{lem:ledger}
+For every $T$ and $u$,
+\[
+B_T(u)=\sum_{\rho}
+        \widehat w\!\Bigl(T(\rho-\tfrac12-it_u)\Bigr)\,e^{u\rho},
+\quad t_u:=\frac{u}{\log T}.
+\]
+\end{lemma}
+
+\begin{proof}
+Plug $\phi(t)=W_T(t-u)$ in \eqref{eq:explicit}; use
+$\widehat{W_T}(\xi)=T\,\widehat w(T\xi)\,e^{-iu\xi}.$
+\end{proof}
+
+Define the \emph{ledger spectrum}
+\(
+\mathcal L_T:=\{\,T(\rho-\tfrac12-i t_u)\mid \rho\text{ zero}\}.
+\)
+Lemma \ref{lem:ledger} rewrites $B_T(u)$ as a positive linear combination
+of $\widehat w$ evaluated on $\mathcal L_T$. 

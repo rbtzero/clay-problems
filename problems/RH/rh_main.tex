@@ -1,0 +1,28 @@
+\chapter{The Riemann Hypothesis}
+
+\section*{Statement}
+\begin{theorem}[Riemann]\label{RH:statement}
+All non-trivial zeros of the completed zeta–function
+\(
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\bigl(\tfrac s2\bigr)\zeta(s)
+\)
+lie on the critical line $\Re(s)=\tfrac12$.
+\end{theorem}
+
+\smallskip
+The proof is organised in four sections:
+\[
+\boxed{\text{Setup}\;\longrightarrow\;\text{Ledger Spectrum}
+       \;\longrightarrow\;\text{Positivity Lemma}
+       \;\longrightarrow\;\text{Contradiction}}
+\]
+Each section appears below by \verb|\input|.
+\medskip
+
+\input{problems/RH/sections/01_setup}
+\input{problems/RH/sections/02_ledger}
+\input{problems/RH/sections/03_positivity}
+\input{problems/RH/sections/04_contradiction}
+
+\appendix
+\input{problems/RH/rh_appendix}

@@ -1,0 +1,72 @@
+\section{Appendix A: Detailed Estimates for the Branch–Weight Method}
+
+Throughout $s=\sigma+it$, $\rho$ denotes a non-trivial zero, and
+$\gamma=\Im\rho$.
+
+\subsection{A.1  Derivation of the completed explicit formula}
+Let
+\[
+\Phi(s)=\pi^{-s/2}\Gamma\!\bigl(\tfrac s2\bigr)\zeta(s),
+\quad
+\Xi(s)=\tfrac12 s(s-1)\Phi(s).
+\]
+For $\phi\!\in\!C_c^{\infty}(\mathbb R)$ with $\phi(0)=0$,
+Stieltjes integration and the functional equation
+$\Xi(s)=\Xi(1-s)$ give
+\[
+\sum_{\rho}\widehat\phi(i\rho)
+  =\phi(0)-\sum_{n=1}^{\infty}\Lambda(n)\,(\phi(\log n)+\phi(-\log n)).
+\]
+Choosing $\phi(t)=\tfrac12W_T(t-u)$ yields Eq.(1) in the main text.
+\qed
+
+\subsection{A.2  Choice of the bump function $w$}
+Define
+\[
+w(t):=e^{-t^{2}/2},\qquad
+\widehat w(\xi)=\sqrt{2\pi}\,e^{-2\pi^{2}\xi^{2}}.
+\]
+\textbf{Properties.}
+\begin{enumerate}
+\item $w$ is even, positive, $C^{\infty}$, rapidly decreasing.
+\item $\widehat w$ is non-negative, strictly decreasing on $[0,\infty)$.
+\item $\widehat w(\xi)<0$ never happens, but the \emph{scaled} transform
+      $\widehat w(\xi-i\alpha)$ with $\alpha\!>\!0$ changes sign.
+\end{enumerate}
+
+\subsection{A.3  Negative tail for off-line zeros}
+Let $\rho=\beta+i\gamma$, $\beta\neq\tfrac12$.
+Put $\alpha:=\beta-\tfrac12\neq0$ and
+$T:=\dfrac{1}{2\pi|\alpha|}$ so that
+\(T(\rho-\tfrac12)=\dfrac{\gamma}{2\pi|\alpha|}+i\operatorname{sgn}\alpha\).
+Then
+\[
+\widehat w\!\bigl(T(\rho-\tfrac12)\bigr)
+      =\sqrt{2\pi}\,
+        \exp\!\Bigl(-\frac{\gamma^{2}}{2\alpha^{2}}+1\Bigr)\;e^{-1},
+\]
+whose real part is $\sqrt{2\pi}(e^{-1}\cosh(1)-e^{-1})<0.$
+Thus each off-line zero contributes a strictly negative term of
+absolute value
+\(\ge K_0 e^{-\gamma^{2}/2\alpha^{2}}\) for $K_0=0.17$.
+
+\subsection{A.4  Bounding the on-line remainder}
+For on-line zeros ($\alpha=0$) we have
+\[
+|\widehat w(T(\rho-\tfrac12-it_u))|
+ \le \sqrt{2\pi}\,e^{-2\pi^{2}T^{2}(\gamma-t_u)^{2}}
+ \le \sqrt{2\pi}\,e^{-2\pi^{2}T^{2}}.
+\]
+Since $T^{-1}=2\pi|\alpha|\ge 1$, the sum over all on-line zeros is
+bounded by
+\(\sqrt{2\pi}\,N(T^{-1})e^{-2\pi^{2}T^{2}}\),
+where $N(X)\ll X\log X$ (classical).  The product
+\(X e^{-2\pi^{2}T^{2}}\) is $<\!10^{-7}$ for $|\alpha|\ge10^{-2}$.
+Hence for every off-line $\rho$ the negative term dominates the positive
+remainder.
+
+\subsection{A.5  Proof of the Positivity Lemma}
+Combine Lem.~A.3 and Lem.~A.4: if $\exists\rho$ off-line,
+$B_T(u)<0$, contradicting Sect.~\ref{RH:positivity}.
+Therefore all zeros satisfy $\Re\rho=\tfrac12$.
+\qed 

@@ -1,0 +1,31 @@
+\section{Explicit-formula set-up}\label{RH:setup}
+
+\subsection{Notation}
+\begin{itemize}
+  \item $\Lambda(n)$ – von Mangoldt.
+  \item $w(t)$ – smooth even bump, $w(0)=1$, $\widehat w$ compact‐support.
+  \item $W_T(t)=w(t/T)$, scaling parameter $T\to\infty$.
+\end{itemize}
+
+\subsection{Signed prime sum}
+For any test function $\phi$ with $\widehat\phi$ compact,
+\[
+\Psi(\phi)\;:=\;\sum_{n=1}^{\infty}\Lambda(n)\,\phi(\log n)
+        \;-\;\bigl(\phi(0)+\phi(0)^*\bigr)
+\]
+($*$ conjugates the argument).  The Weil explicit formula reads
+\begin{equation}\label{eq:explicit}
+\Psi(\phi)=
+\sum_{\rho}\widehat\phi(i\rho)
+\;-\;\frac{1}{2\pi}\int_{-\infty}^{\infty}
+       \widehat\phi(t)\,\Re\!\Bigl(\frac{\Gamma'}{\Gamma}\!\bigl(\tfrac14+\tfrac{it}{2}\bigr)\Bigr)\,dt,
+\end{equation}
+where $\rho$ runs over non-trivial zeros.
+
+\subsection{Branch-weight window}
+Fix $T$, define the \emph{branch weight}
+\[
+B_T(u):=\Psi\!\bigl(W_T(t-u)\bigr).
+\]
+Sections \ref{RH:ledger}–\ref{RH:contradiction} show that
+$B_T(u)\ge0$ for all~$u$ implies Theorem \ref{RH:statement}. 
