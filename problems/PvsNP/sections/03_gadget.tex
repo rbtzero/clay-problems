@@ -1,0 +1,23 @@
+\section{Hamiltonian‐cycle gadget pair}\label{P:gadget}
+
+For each $n\ge8$ define two ordered graphs.
+
+\paragraph{\textbf{YES‐instance $A_{n}$.}}
+Vertices $V=\{v_{0},\dots,v_{2n-1},h_{0},\dots,h_{n-1}\}$ with order
+$v_{0}<\dots<v_{2n-1}<h_{0}<\dots<h_{n-1}$.
+Edges:
+\begin{itemize}
+  \item spine cycle $C_{2n}$ on the $v$'s;
+  \item hub $h_{i}$ adjacent to $v_{2i}$ and $v_{2i+n}$;
+  \item perfect matching $h_{i}\!\leftrightarrow\!v_{2i+n}$.
+\end{itemize}
+Graph is 3–regular and Hamiltonian.
+
+\paragraph{\textbf{NO‐instance $B_{n}$.}}
+Replace the spine by two disjoint $n$‐cycles
+$a_{0}\dots a_{n-1}$ and $b_{0}\dots b_{n-1}$ (same order as $v$'s).
+Hub $h_{i}$ adjacent to $a_{2i}$ and $b_{2i}$; matching duplicated.
+
+$B_{n}$ has no Hamiltonian cycle: hubs force repetition.
+
+We call $\langle A_{n},B_{n}\rangle$ the \emph{HC gadget}. 

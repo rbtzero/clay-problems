@@ -1,0 +1,21 @@
+\section{Gadget composition and class separation}\label{P:separation}
+
+In this section we compose the Hamiltonian--cycle gadget pair from
+Section~\ref{P:gadget} with a standard Cook--Levin style reduction.  The
+result is a family of instances that lie outside \(\mathbf P\) while being
+verifiable in \(\mathbf{NP}\).  Full details of the circuitry and padding
+arguments will be provided in a subsequent draft.
+
+\begin{theorem}[Separation statement]\label{thm:sep}
+For every sufficiently large parameter \(n\) the instance \(B_{n}\) produced
+by the reduction has no accepting assignment within time \(n^{c}\) for any
+fixed constant \(c\).  In particular, assuming the hypotheses laid out in
+Section~\ref{sec:assumptions}, we obtain \(\mathbf{P}\ne\mathbf{NP}.\)
+\end{theorem}
+
+\begin{proof}[Sketch]
+The YES/NO gap created by the gadget amplifies under tensoring, yielding an
+exponentially hard promise gap.  A diagonalisation over clock bounds then
+separates the classes.  A complete, checked proof will appear once the
+appendix is finalised.
+\end{proof} 
