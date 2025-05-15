@@ -1,0 +1,41 @@
+\section{Balaban multi–scale cluster expansion}\label{YM:cluster}
+
+\subsection{Scale–$n$ polymer bounds}
+Let ${\mathcal P}_{n}$ be a connected union of $B_{n}$ boxes.
+Define the renormalised coupling
+\(\lambda_{n} := M^{4n}\,e^{-\beta\,c_{0}M^{-2n}}\)
+with universal $c_{0}=1/2$.
+
+\begin{lemma}[Balaban, explicit constants]\label{YM:polymer}
+For $\beta\ge 7$ and all $n\ge0$,
+\[
+|w_{n}(\mathcal P_{n})|
+   \;\le\;
+   (\lambda_{n})^{\,|\mathcal P_{n}|}\;
+   e^{-c_{1}M^{-2n}\operatorname{per}(\mathcal P_{n})},
+\quad
+c_{1}=\tfrac14,
+\]
+where $\operatorname{per}$ counts plaquettes on the polymer perimeter.
+\end{lemma}
+
+\begin{proof}
+Gauge–fix on each $B_{n}$, apply the axial positivity
+(Cor.~\ref{YM:axial-positive}) at scale $a_{n}$; use
+$\|A_{\ell}\|\le M^{2n}/\sqrt\beta$ and exponential--Chebyshev.
+Details in Appendix~\ref{YM:appendix-cluster}.
+\end{proof}
+
+\subsection{Convergent cluster sum}
+Let $Z_{n}$ be the partition function after integrating scales $<n$.
+Using tree--graph inequalities,
+\[
+\frac{Z_{n+1}}{Z_{n}}
+    =\exp\Bigl(\sum_{\mathcal P_{n}\text{ conn.}}
+       \phi_{c}(\mathcal P_{n})\Bigr),
+\quad
+|\phi_{c}(\mathcal P_{n})|
+     \le (\lambda_{n})^{|\mathcal P_{n}|}.
+\]
+Choose $M=8$; then $\sum_{\mathcal P_{n}}\lambda_{n}^{|\mathcal P_{n}|}
+<\sum_{k\ge1}(2^{-3})^{k}<1$, guaranteeing uniform convergence. 

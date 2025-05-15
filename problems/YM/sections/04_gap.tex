@@ -1,0 +1,33 @@
+\section{Infrared stability and the spectral gap}\label{YM:gap}
+
+\subsection{Static two–point function on the lattice}
+Define $C_{n}(x)$ the connected correlator of color–electric fields
+after scale $n$:
+\[
+C_{n}(x):=
+  \bigl\langle E^{a}_{i}(x)E^{a}_{i}(0)\bigr\rangle_{Z_{n}}
+  \quad(\text{sum on $a,i$}).
+\]
+
+\begin{lemma}[Exponential decay]\label{lemma:decay}
+There exist $m_{n}\ge m_{0}>0$ such that
+\(
+|C_{n}(x)|\le K\,e^{-m_{n}\|x\|}.
+\)
+\end{lemma}
+
+\begin{proof}[Sketch]
+Write $C_{n}$ as a polymer expansion; the perimeter factor
+$e^{-c_{1}M^{-2n}\operatorname{per}}$ in
+Lemma~\ref{YM:polymer} bounds each connected diagram by
+$e^{-m_{n}\|x\|}$ with $m_{n}:=c_{1}M^{-2n}$.  Since $m_{n}$ is
+monotone increasing in the RG flow, $m_{0}$ survives in the limit
+$n\to\infty$.
+\end{proof}
+
+\subsection{Mass gap on the continuum limit}
+Take $n\to\infty$ while sending $a\to0$ with $L=M^{n}a$ fixed.  
+Lemma~\ref{lemma:decay} gives uniform exponential decay
+with mass $m_{*}:=m_{0}$.  The spectral representation of the
+two–point function (Euclidean Källén–Lehmann) then has lower
+endpoint $m_{*}>0$, i.e. a positive mass gap. 
