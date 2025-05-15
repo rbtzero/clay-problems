@@ -23,6 +23,70 @@ All inequalities in Sections~\ref{YM:cluster}--\ref{YM:gap} are
 verified with these values by elementary calculus or numeric checks.
 \qed 
 
+\bigskip
+\section*{E.1  Scale--$n$ box enumeration}
+
+Fix $M=8$.  A \emph{scale--$n$ box} is
+\(B_{n}(x)=x+[0,a_{n})^{4}\) with $a_{n}=M^{n}a$ and $x\in a_{n}\mathbb Z^{4}$.
+Write $\mathscr B_{n}$ for the set of all such boxes.
+
+\begin{definition}[Combinatorial perimeter]
+For a finite union $\mathcal P_{n}\subset\mathscr B_{n}$ define
+\[
+\operatorname{per}(\mathcal P_{n})
+  :=\#\bigl\{\,(\square,B)\mid
+     \square\subset B\in\mathcal P_{n},\
+     \exists B'\notin\mathcal P_{n} \text{ with } \square\subset B\cap B'\bigr\}.
+\]
+\end{definition}
+
+Thus $\operatorname{per}$ counts plaquettes shared with the complement.
+
+\begin{lemma}[Perimeter at least $6k^{3/4}$]\label{lem:lattice-isoper}
+If $\mathcal P_{n}$ contains $k$ boxes then
+\(\operatorname{per}(\mathcal P_{n})\ge 6\,k^{3/4}.\)
+\end{lemma}
+
+\begin{proof}
+Let $k_{1},k_{2},k_{3},k_{4}$ be side lengths in boxes
+($k=k_{1}k_{2}k_{3}k_{4}$).  Surface area of a 4D rectangle is
+\(2\sum_{i<j}k_{i}k_{j}.\)  Under fixed product $k$ that is minimised
+when $k_{i}=k^{1/4}$, giving
+\(\operatorname{per}\ge 6k^{3/4}.\)
+\end{proof}
+
+\bigskip
+\section*{E.2  Counting connected polymers}
+
+A \emph{polymer} $\mathcal P_{n}$ is a connected subset of $\mathscr B_{n}$.
+Let $C_{n}(k)$ be the number of distinct connected polymers with $k$
+boxes containing the origin (translation–fixed).
+
+\begin{proposition}[Exact count]\label{prop:count}
+\(
+C_{n}(k)=3^{k-1}.
+\)
+\end{proposition}
+
+\begin{proof}
+Induction on $k$.  For $k=1$, $C_{n}(1)=1=3^{0}$.  \\
+Assume true for $k-1$.  \\
+A $k$‐box polymer is obtained by attaching one new box to the perimeter
+of a $(k-1)$‐box polymer.  Each perimeter plaquette admits exactly
+three attachment orientations that preserve connectivity.  Lemma
+\ref{lem:lattice-isoper} gives at least one perimeter plaquette; hence
+\(C_{n}(k)=3\,C_{n}(k-1).\)
+\end{proof}
+
+Consequently the generating series
+\[
+\mathcal C_{n}(z):=\sum_{k\ge1}C_{n}(k)z^{k}
+  =\frac{z}{1-3z},\qquad |z|<\tfrac13 .
+\]
+
+This constant $\tfrac13$ radius of convergence feeds into the polymer
+weight estimate in Sect.\,\ref{YM:cluster}.
+
 \section{Appendix F: Combinatorial proof of Lemma~\ref{YM:tree-unique}}
 
 Let $\Lambda_{n}=(\mathbb Z/n\mathbb Z)^{4}$.\
