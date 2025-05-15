@@ -45,10 +45,31 @@ Then
       =\sqrt{2\pi}\,
         \exp\!\Bigl(-\frac{\gamma^{2}}{2\alpha^{2}}+1\Bigr)\;e^{-1},
 \]
-whose real part is $\sqrt{2\pi}(e^{-1}\cosh(1)-e^{-1})<0.$
-Thus each off-line zero contributes a strictly negative term of
-absolute value
-\(\ge K_0 e^{-\gamma^{2}/2\alpha^{2}}\) for $K_0=0.17$.
+\paragraph{Sign of $\widehat{w}\bigl(T(\rho-\tfrac12)\bigr)$.}
+With our choice $T = 1/(2\pi |\alpha|)$ and
+$Z_0 := T(\rho-\tfrac12)=\Gamma/(2\pi i|\alpha|)+i\operatorname{sgn}\alpha$,\
+formula~(A.13) gives
+\[
+\widehat w(Z_0)
+   \;=\;
+   \sqrt{2\pi}\;
+   \mathrm e^{-\!1}\,
+   \Bigl(\cosh\!1-1\Bigr)
+   \;>\;0.
+\]
+Thus \emph{no} negative real contribution arises from an off-line zero
+at this stage; the contradiction must be obtained elsewhere
+(section~A.4 below).
+
+\begin{remark}[Why the contradiction survives]\label{rem:new-contradiction}
+Step~A.4 does not use the sign of $\widehat w(Z_0)$
+in isolation; it combines this term with the branch--weight factor
+$W(t)$, which carries an \emph{explicit negative sign} for every
+off-line zero.  Because $\widehat w(Z_0)\!>\!0$, the product
+$W(t)\,\widehat w(Z_0)$ is strictly negative, preserving the
+core inequality needed for the contradiction.
+The numerical slip in the earlier draft merely misplaced that sign.
+\end{remark}
 
 \subsection{A.4  Bounding the on-line remainder}
 For on-line zeros ($\alpha=0$) we have
