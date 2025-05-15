@@ -47,5 +47,5 @@ jobs:
           echo "${HOME}/.elan/bin" >> $GITHUB_PATH
       - name: Check Lean stubs (RH, NS)
         run: |
-          lean -Dpp.unicode=true problems/RH/rh_lean/Ledger.lean
-          lean -Dpp.unicode=true problems/NS/ns_lean/Energy.lean 
+          lean problems/RH/rh_lean/Ledger.lean
+          lean problems/NS/ns_lean/Energy.lean 
