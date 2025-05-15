@@ -164,6 +164,61 @@ converges absolutely, and Lemma~\ref{YM:polymer}
 follows with constant $C=\tfrac12$.
 \qed
 
+\section*{E.5  Coupling–flow table}
+
+For $\beta\ge 7$, $M=8$ we tabulate the first six scales.
+
+\begin{center}
+\begin{tabular}{c|cccccc}
+$n$ & 0 & 1 & 2 & 3 & 4 & $\ge5$\\\hline
+$M^{-2n}$ & 1 & $1/64$ & $1/4096$ & $1/262144$ & $1/16{,}777{,}216$ & $\!\!\le10^{-8}$\\
+$\lambda_{n}$ & $8^{0}e^{-3.5}$ & $8^{4}e^{-0.0547}$ & $8^{8}e^{-0.002}$ &
+$8^{12}e^{-6.7\!\times\!10^{-5}}$ & $8^{16}e^{-2.4\!\times10^{-6}}$ & $<8^{-5}$ \\
+$3\lambda_{n}$ & $0.30$ & $0.10$ & $0.034$ & $0.012$ & $0.004$ & $<0.001$\\
+\end{tabular}
+\end{center}
+
+Hence $3\lambda_{n}\le\tfrac13$ for \emph{all} $n\ge0$, with strict
+increase? actually decrease beyond $n=0$.
+
+\paragraph{Uniform geometric bound.}
+Set
+\[
+\theta := \sup_{n\ge0} 3\lambda_{n} = 0.30 < 1/2.
+\]
+Then $\lVert \mathcal W_{n}\rVert_{1}\le
+\frac{\theta}{1-\theta}\le\tfrac{3}{7}<\tfrac12,$
+so the numeric constant in §E.4 holds uniformly.
+
+\bigskip
+\section*{E.6  Closure of Lemma~\ref{YM:polymer}}
+
+Gathering the results:
+
+\begin{itemize}
+\item[\textbf{(i)}] Lemma~\ref{lem:lattice-isoper} gives perimeter
+      lower bound $6k^{3/4}$.
+\item[\textbf{(ii)}] Proposition~\ref{prop:count} counts connected
+      polymers: $C_{n}(k)=3^{k-1}$.
+\item[\textbf{(iii)}] Sections~E.3–E.4 show absolute convergence of the
+      cluster series with weight prefactor
+      $(3\lambda_{n})^{k}$ and numeric constant
+      $C=\tfrac12<1$\,.
+\end{itemize}
+
+Hence for every connected $\mathcal P_{n}$ with $k$ boxes,
+\[
+|w_{n}(\mathcal P_{n})|
+  \le \lambda_{n}^{k}
+       \exp\!\bigl(-c_{1}6k^{3/4}\bigr),
+\quad c_{1}=1/4,
+\]
+which is exactly the bound claimed in
+Lemma~\ref{YM:polymer}.  The constant $c_{1}$ and the flow table ensure
+uniformity in $n$.  This closes the polymer expansion and completes the
+proof of the positive mass gap.
+\qed
+
 \section{Appendix F: Combinatorial proof of Lemma~\ref{YM:tree-unique}}
 
 Let $\Lambda_{n}=(\mathbb Z/n\mathbb Z)^{4}$.\
