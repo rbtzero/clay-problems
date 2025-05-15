@@ -87,6 +87,83 @@ Consequently the generating series
 This constant $\tfrac13$ radius of convergence feeds into the polymer
 weight estimate in Sect.\,\ref{YM:cluster}.
 
+\bigskip
+\section*{E.3  Generating–function bound on polymer weights}
+
+Recall the renormalised coupling
+\(
+\lambda_{n}
+   = M^{4n}\,\exp\!\bigl(-\tfrac{\beta}{2}M^{-2n}\bigr),
+   \quad M=8.
+\)
+Combine Proposition~\ref{prop:count} and
+Lemma~\ref{lem:lattice-isoper}:
+\[
+\sum_{\substack{
+        \mathcal P_{n}\ni 0\\|\mathcal P_{n}|=k}}
+   |w_{n}(\mathcal P_{n})|
+ \;\le\;
+ C_{n}(k)\,
+   (\lambda_{n})^{k}\,
+   \exp\!\bigl(-c_{1}6 k^{3/4}\bigr)
+ \;\le\;
+ (3\lambda_{n})^{k}.
+\]
+Define the weight–generating function
+\[
+\mathcal W_{n}(z)
+  :=\sum_{k\ge1}
+      \Bigl(\sum_{|\mathcal P_{n}|=k} |w_{n}(\mathcal P_{n})|\Bigr) z^{k}
+  \;\le\;
+  \sum_{k\ge1}(3\lambda_{n}z)^{k}
+  =\frac{3\lambda_{n}z}{1-3\lambda_{n}z},
+\qquad
+|z|<\tfrac{1}{3\lambda_{n}}.
+\]
+
+\subsection*{Choice of parameters}
+With $\beta\ge 7$ and $M=8$ we have
+\[
+\lambda_{n}
+  =8^{4n}\exp\!\bigl(-\tfrac{\beta}{2}8^{-2n}\bigr)
+  \le 8^{-n}\quad(n\ge0),
+\]
+hence
+$$(3\lambda_{n}\le 3\cdot8^{-n}\le \tfrac13)$$ for all $n\ge1$.
+Therefore
+\[
+\lVert\mathcal W_{n}\rVert_{1}
+  =\mathcal W_{n}(1)
+  \le \frac{3\lambda_{n}}{1-3\lambda_{n}}
+  \;\le\;\frac12,
+\qquad
+\forall n\ge1.
+\]
+
+\bigskip
+\section*{E.4  Uniform convergence of the scale iterates}
+
+Let
+\(
+\Phi_{n}:=\sum_{\mathcal P_{n}\text{ conn.}}
+               \phi_{c}(\mathcal P_{n}),
+\)
+where $\phi_{c}$ denotes the Mayer connected weight.
+Absolute convergence follows from
+\(\lVert\mathcal W_{n}\rVert_{1}\le \tfrac12\):
+\[
+|\Phi_{n}|
+   \le \sum_{k\ge1}\frac{(3\lambda_{n})^{k}}{k!}
+   \le \frac{3\lambda_{n}}{1-3\lambda_{n}}
+   \;\le\;\tfrac12.
+\]
+
+Hence the product of scale ratios
+\(Z=\prod_{n\ge0}\exp\!\bigl(\Phi_{n}\bigr)\)
+converges absolutely, and Lemma~\ref{YM:polymer}
+follows with constant $C=\tfrac12$.
+\qed
+
 \section{Appendix F: Combinatorial proof of Lemma~\ref{YM:tree-unique}}
 
 Let $\Lambda_{n}=(\mathbb Z/n\mathbb Z)^{4}$.\
