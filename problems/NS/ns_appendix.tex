@@ -1,0 +1,27 @@
+\section{Appendix B: Bilinear Estimate Details}\label{NS:appendix-bilinear}
+
+\subsection{Bony paraproduct split}
+\[
+u\!\cdot\!\nabla u
+  =\!\!\sum_{|j-k|\le4}\!\!
+     \Delta_{j}u\cdot\nabla S_{k-1}u
+   +\!\!\sum_{|j-k|\le4}\!\!
+     S_{j-1}u\cdot\nabla\Delta_{k}u
+   +\!\!\sum_{|j-k|>4}\!\!
+     \Delta_{j}u\cdot\nabla\Delta_{k}u.
+\]
+
+\subsection{High–low term}
+For $|j-k|\le4$,
+\(
+\|\Delta_{j}u\|_{\infty}\le C 2^{3j/2}\|\Delta_{j}u\|_{2}.
+\)
+Multiplying by $e^{\sigma 2^{j}}$ and summing gives contribution
+\(\le C G_{1}^{3/2}\).
+
+\subsection{High–high term}
+If $|j-k|>4$ the product's Fourier support lies in an annulus
+$\simeq2^{\max\{j,k\}}$.  Reindex and use Cauchy–Schwarz to obtain the
+same $G_{1}^{3/2}$ bound.
+
+\qed 

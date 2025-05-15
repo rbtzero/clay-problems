@@ -1,0 +1,19 @@
+\section{Littlewood–Paley framework}\label{NS:setup}
+
+Fix a dyadic partition $\{\Delta_{j}\}_{j\ge-1}$ of unity in Fourier
+space.  Let
+\[
+E(t):=\sum_{j\ge-1} 2^{2j}\,\|\Delta_{j}u(t)\|_{2}^{2},
+\quad
+G(t):=\sum_{j\ge-1} e^{2\sigma(t)2^{j}}\|\Delta_{j}u(t)\|_{2}^{2}.
+\]
+Here $\sigma(t)$ is the analytic radius, to be chosen below.
+
+\begin{lemma}[Gevrey $\Rightarrow$ Sobolev]\label{NS:gevrey-sobolev}
+If $G(t)<\infty$ then $u(t)\in H^{k}$ for every $k$ with bound
+$\|u(t)\|_{H^{k}}\le C_{k}G(t)$.
+\end{lemma}
+
+\begin{proof}
+Immediate from $2^{kj}\le (\tfrac{e^{\sigma 2^{j}}}{\sigma^{k}})$ and Cauchy.
+\end{proof} 

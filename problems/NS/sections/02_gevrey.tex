@@ -1,0 +1,20 @@
+\section{Gevrey radius evolution}\label{NS:gevrey}
+
+Let $\sigma(t)=\sigma_{0}-\alpha t$ with $\alpha>0$.
+
+\begin{lemma}[Radius differential]\label{lem:dGdt}
+\[
+\frac{d}{dt}G(t)
+  +2\nu\,G_{1}(t)
+  \;\le\;
+  C\sum_{j} e^{2\sigma 2^{j}}\,
+        2^{j}\bigl\|\Delta_{j}(u\!\cdot\!\nabla u)\bigr\|_{2}
+        \|\Delta_{j}u\|_{2},
+\]
+where $G_{1}(t):=\sum 2^{2j}\,e^{2\sigma 2^{j}}\|\Delta_{j}u\|_{2}^{2}$.
+\end{lemma}
+
+\begin{proof}
+Differentiate $G$, use $\partial_{t}e^{2\sigma 2^{j}}=-2\alpha 2^{j}
+e^{2\sigma 2^{j}}$ and the NSE.
+\end{proof} 

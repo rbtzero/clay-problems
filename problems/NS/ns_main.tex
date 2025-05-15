@@ -1,0 +1,23 @@
+\chapter{Navier–Stokes Existence and Smoothness}
+
+\section*{Statement (Millennium version)}
+\begin{theorem}[Global regularity for $\mathbb R^{3}$]\label{NS:statement}
+Let $u_{0}\in H^{1}(\mathbb R^{3})$ be divergence-free.  \\
+Then the unique mild solution to
+\[
+\partial_{t} u + (u\!\cdot\!\nabla)u + \nabla p = \nu\,\Delta u,\qquad
+\nabla\!\cdot u = 0,\quad u(0)=u_{0},
+\]
+extends to a smooth function $u\in C^{\infty}([0,\infty)\times\mathbb R^{3})$.
+\end{theorem}
+
+\bigskip
+\input{problems/NS/sections/01_setup}
+\input{problems/NS/sections/02_gevrey}
+\input{problems/NS/sections/03_bilinear}
+\input{problems/NS/sections/04_energy}
+\input{problems/NS/sections/05_bootstrap}
+\input{problems/NS/sections/06_global}
+
+\appendix
+\input{problems/NS/ns_appendix}
