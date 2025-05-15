@@ -45,10 +45,9 @@ jobs:
           sudo apt-get update -y && sudo apt-get install -y curl
           curl -L https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | bash -s -- -y
           echo "${HOME}/.elan/bin" >> $GITHUB_PATH
-      - name: Check Lean stubs (RH, NS)
+      - name: Build Lean project (Lake)
         run: |
-          lean problems/RH/rh_lean/Ledger.lean
-          lean problems/NS/ns_lean/Energy.lean
-          lean problems/YM/ym_lean/AxialPositivity.lean
+          lake exe cache get || true
+          lake build
       - name: Run PvsNP gadget checker
         run: python problems/PvsNP/pnp_checker.py 
