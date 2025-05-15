@@ -1,0 +1,27 @@
+\section{Immerman--Szelepcsényi completeness}\label{P:immerman}
+
+As an auxiliary result we verify the closure of \(\mathbf{NL}\) under
+complement following the method of Immerman and Szelepcsényi.  Although not
+strictly necessary for the main separation, the argument illustrates the
+nondeterministic counting technique that underlies our verifier.
+
+\begin{lemma}[Reachability counting]\label{lem:reach-count}
+Let \(G\) be a directed graph on \(n\) vertices and \(s,t\in V(G)\).  The
+number of vertices reachable from \(s\) can be computed by a nondeterministic
+logspace machine using at most \(O(\log n)\) bits of auxiliary storage.
+\end{lemma}
+
+\begin{proof}[Idea]
+The machine recursively guesses frontier sets and verifies their sizes by
+iterating over the adjacency list.  Details follow the classical proof; we
+omit them here for brevity.
+\end{proof}
+
+\begin{theorem}[Immerman--Szelepcsényi]
+\(\mathbf{NL}=\mathbf{coNL}.\)
+\end{theorem}
+
+\begin{proof}[Sketch]
+Apply Lemma~\ref{lem:reach-count} to the complement of the reachability
+problem.  \qedhere
+\end{proof} 

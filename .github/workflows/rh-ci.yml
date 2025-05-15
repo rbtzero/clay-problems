@@ -23,7 +23,7 @@ jobs:
         id: compile
         continue-on-error: true
         run: |
-          latexmk -pdf -interaction=nonstopmode -file-line-error -halt-on-error main.tex 2>&1 | tee build.log
+          latexmk -pdf -interaction=nonstopmode -file-line-error -halt-on-error clay-problems/main.tex 2>&1 | tee build.log
       - name: Tail build log on failure
         if: steps.compile.outcome == 'failure'
         run: tail -n 200 build.log
@@ -47,6 +47,8 @@ jobs:
           echo "${HOME}/.elan/bin" >> $GITHUB_PATH
       - name: Check Lean stubs (RH, NS)
         run: |
-          lean problems/RH/rh_lean/Ledger.lean
-          lean problems/NS/ns_lean/Energy.lean
-          lean problems/YM/ym_lean/AxialPositivity.lean 
+          lean clay-problems/problems/RH/rh_lean/Ledger.lean
+          lean clay-problems/problems/NS/ns_lean/Energy.lean
+          lean clay-problems/problems/YM/ym_lean/AxialPositivity.lean
+      - name: Run PvsNP gadget checker
+        run: python clay-problems/problems/PvsNP/pnp_checker.py 
