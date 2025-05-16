@@ -5,8 +5,11 @@
 import Mathlib.Analysis.SpecialFunctions.Trigonometric
 import Mathlib.Topology.Algebra.InfiniteSum
 import Mathlib.Analysis.Distribution.SchwartzSpace
+import Mathlib.MeasureTheory.Integral.Lebesgue
+import Mathlib.Analysis.SpecialFunctions.ExpLog
 
 open Real
+open scoped RealInnerProductSpace
 
 namespace RH
 
@@ -37,5 +40,20 @@ lemma pw_admissible {t : ℝ} (ht : 0 < t) :
   refine ⟨fun _n ↦ 0, ?_⟩
   intro n
   simp
+
+section GaussianConstant
+
+open MeasureTheory
+
+/-- The constant `c₀ = π^{3/2}` arising from the Gaussian integral in three dimensions. -/
+def c0 : ℝ := Real.pi ^ (3 / 2 : ℝ)
+
+lemma c0_pos : 0 < c0 := by
+  have hπ : (0 : ℝ) < Real.pi := Real.pi_pos
+  have : 0 < Real.pi ^ (3 / 2 : ℝ) := by
+    simpa using Real.rpow_pos_of_pos hπ (3 / 2 : ℝ)
+  simpa [c0] using this
+
+end GaussianConstant
 
 end RH 
