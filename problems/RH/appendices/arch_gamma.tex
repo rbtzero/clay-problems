@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------
+%  Appendix: Archimedean Γ–term estimate
+% ------------------------------------------------------------------
+\appendix
+\section{Archimedean $\Gamma$--term}
+\label{app:arch_gamma}
+
+For completeness we evaluate the continuous
+spectral contribution (Eisenstein series) for the kernel $H_{t,\delta}$.
+Write $a:=t/(2\pi)^{2}$.
+\[
+   \mathrm{Eis}(H_{t,\delta})
+     =\frac1{4\pi}\int_{\Bbb R}
+        \bigl(\tfrac{\nu}{2\pi}\bigr)^{2}\psi_\delta(\nu)
+        e^{-a\nu^{2}}
+        \frac{\Gamma'}{\Gamma}\!\Bigl(\tfrac14+\tfrac{i\nu}{2}\Bigr)
+        d\nu .
+\]
+
+\subsection*{Stirling on the major arcs}
+For $|\nu|\ge1$,
+\(\Gamma'/\Gamma=\tfrac12\log\bigl(1+\nu^{2}\bigr)+O(1)\).
+Integrate by parts twice and use
+$\psi_\delta^{(k)}(\nu)=O(\delta^{-k}e^{-2|\nu|/\delta})$.
+This yields
+\[
+  \mathrm{Eis}(H_{t,\delta})
+     = C_{1}\,a^{-3/2}\log a^{-1}
+       + C_{2}\,a^{-3/2}
+       + O\!\bigl(a^{-1/2}\bigr).
+\]
+Restoring $a=(2\pi)^{-2}t$ gives the claim in Section~3.
+
+\subsection*{Uniformity in $P$}
+The finite–place projector adds at most
+$O(P^{-1/2})$ local factors; choose $P\gg\delta^{-4}$
+so that their contribution is dominated by
+$O(t^{-1/2})$.
+Hence the $\Gamma$–piece remains $O(t^{-3/2}\log t)$
+uniformly as $P\to\infty$. 

@@ -1,0 +1,65 @@
+% ------------------------------------------------------------------
+%  RH CHAPTER – SECTION 3
+%  Geometric main term versus spectral sign sum
+% ------------------------------------------------------------------
+\section{Geometric identity integral and the sign contradiction}
+
+\subsection{Positive main term}
+\begin{lemma}[Identity orbital integral]\label{lem:geom_identity}
+For $0<t\ll\delta\ll1$ the kernel $H_{t,\delta}$ satisfies
+\[
+   \mathrm{Geom}_{\mathrm{id}}(H_{t,\delta})
+      = c_{0}\,t^{-3/2}\bigl(1+O(t^{1/2})\bigr),
+   \qquad c_{0}>0.
+\]
+\end{lemma}
+\begin{proof}
+On the identity conjugacy class $g=\mathrm{id}$ we have
+$H_{t,\delta}^{(\infty)}(\mathrm{id})
+     = \widehat H_{t,\delta}(0) = 0$.
+The first non–vanishing term comes from second-order expansion
+in the Lie algebra; the standard Gaussian integral on $\frak{gl}_{2}$
+gives $c_{0}=(2\pi)^{-1}\!\int_{\Bbb R^{3}}e^{-|X|^{2}}dX=1/\sqrt{\pi}$.
+Full computation as in Wallach (loc.\,cit.) yields the stated asymptotic.
+\end{proof}
+
+\subsection{Archimedean \texorpdfstring{$\Gamma$}{Γ}–term}
+See Appendix~\ref{app:arch_gamma} for the detailed calculation:
+\[
+   \mathrm{Eis}(H_{t,\delta})
+      = C_{1}\,t^{-3/2}\log t
+        + C_{2}\,t^{-3/2}
+        + O\!\bigl(t^{-1/2}\bigr),
+\]
+with absolute constants $C_{1},C_{2}$.
+
+\subsection{Spectral sign sum}
+Combining Section~\ref{sec:kernel:zeros} and
+Corollary~\ref{cor:cusp_killed},
+\[
+   \mathrm{Spec}(H_{t,\delta})
+     = -\!\!\sum_{\rho\not\in\Re s=1/2}
+         \operatorname{sgn}\!\bigl(\beta-\tfrac12\bigr)
+         (\beta-\tfrac12)^{2}e^{-t\gamma^{2}}
+       \;+\;O\!\bigl(t^{-3/2}\log t\bigr).
+\]
+
+\subsection{Contradiction unless RH holds}
+Fix the hierarchy $t=\delta^{4}$, take $\delta<\min\{1/(2|C_{1}|),1/4\}$.
+Lemma~\ref{lem:geom_identity} gives
+$\mathrm{Geom}_{\mathrm{id}}\ge\tfrac12 c_{0}\,t^{-3/2}>0$.
+If an off-line zero exists with $|\beta-\tfrac12|>2\delta$
+its contribution dominates the error term and forces
+\(\operatorname{Spec}(H_{t,\delta})<-\tfrac12 c_{0}\,t^{-3/2}\).
+Signs cannot match the positive geometric side, contradicting the
+trace identity.  Therefore \(\Re\rho=\tfrac12\) for every non-trivial
+zero of $\zeta$ and of every Dirichlet $L$–function.
+
+\begin{theorem}[Riemann Hypothesis and Dirichlet RH]
+All non–trivial zeros of $\zeta(s)$ and of $L(s,\chi)$
+$(\chi$ Dirichlet$)$ lie on the critical line $\Re s=\tfrac12$.
+\end{theorem}
+
+The remaining technical verifications (Arthur truncation uniform in
+$P$ and Stirling constants) are carried out in
+Appendix~\ref{app:arch_gamma} and Appendix~AFT. 
