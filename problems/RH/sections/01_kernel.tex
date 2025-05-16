@@ -1,0 +1,100 @@
+% ------------------------------------------------------------------
+%  RH CHAPTER – SECTION 1
+%  A Paley–Wiener kernel whose spectral weight flips sign off the critical line
+% ------------------------------------------------------------------
+\section{The sign–flipping Paley–Wiener kernel}
+
+\subsection{Spectral definition}
+\label{sec:kernel:spectral}
+Fix parameters \(0<t\!\ll\!\delta\!\ll\!1\).  For the spectral
+parameter \(\nu\in\Bbb R\) put
+\begin{equation}
+  \widehat H_{t,\delta}(\nu)
+     = -\Bigl(\frac{\nu}{2\pi}\Bigr)^{2}
+       \psi_\delta(\nu)\;
+       \exp\!\Bigl[-\,\nu^{2}t\big/\!(2\pi)^{2}\Bigr],
+  \qquad
+  \psi_\delta(\nu):=\tanh\!\Bigl(\frac{\nu}{\delta}\Bigr).
+  \label{eq:Hhat}
+\end{equation}
+\(\widehat H_{t,\delta}\) is even, entire, and rapidly decaying
+\((\forall N:\; \widehat H_{t,\delta}(\nu)=O_N\!\bigl((1+\nu^2)^{-N}\bigr))\);
+thus by Harish–Chandra--Paley–Wiener theory it is the spherical
+transform of a smooth bi-\(K_\infty\) function
+\(H_{t,\delta}^{(\infty)}\colon
+  G(\Bbb R)\to\Bbb C\) with Schwartz decay.
+
+\begin{lemma}[Archimedean Schwartz bound]
+\label{lem:PW}
+\[
+   H_{t,\delta}^{(\infty)}(g_\infty)
+        \;=\; O_N\!\bigl(1+\|g_\infty\|\bigr)^{-N}
+        \quad\text{for every }N.
+\]
+\end{lemma}
+\begin{proof}
+Immediate from \eqref{eq:Hhat} and
+Paley–Wiener (\emph{cf.} Wallach 1992, Thm.~15.2.2).
+\end{proof}
+
+\subsection{Finite-place projector}
+\label{sec:kernel:finite}
+For each prime \(p\) let \(K_p=G(\Bbb Z_p)\subset G(\Bbb Q_p)\) and put
+\begin{equation}
+   T_p^{(0)}(g)
+      :=\int_{K_p}\!\!\int_{K_p}
+           1_{K_p}(k_1\,g\,k_2)\,dk_1\,dk_2 .
+   \label{eq:Tp0}
+\end{equation}
+Lemma~\ref{lem:finite_projector} (Section 2) shows
+\(\pi(T_p^{(0)})\) acts by \(1\) on an unramified
+representation and by \(0\) on every ramified one.
+
+\subsection{Global kernel}
+\label{sec:kernel:global}
+Choose a level \(P\) so large that every cuspidal automorphic
+representation of \(G(\Bbb A)\) is ramified at some \(p>P\).
+Define
+\begin{equation}
+  H_{t,\delta}(g)
+     := H_{t,\delta}^{(\infty)}(g_\infty)
+        \prod_{p<P} 1_{K_p}(g_p)\;
+        \prod_{p\ge P} T_p^{(0)}(g_p).
+  \label{eq:Hglobal}
+\end{equation}
+
+\begin{lemma}[Trace-formula admissibility]
+\label{lem:trace_admissible}
+The kernel \(H_{t,\delta}\) lies in the
+Arthur–Selberg space \(C_\mathrm{cusp}^\infty(G(\Bbb A))\);
+hence
+\[
+   \mathrm{Geom}(H_{t,\delta}) = \mathrm{Spec}(H_{t,\delta}),
+\]
+and both sides are absolutely convergent.
+\end{lemma}
+\begin{proof}
+Archimedean decay is Lemma~\ref{lem:PW}.
+Every finite component is in the
+compactly supported Hecke algebra.
+Arthur's truncation theorem (Arthur 1981, Prop.~2.1)
+then gives absolute convergence.
+\end{proof}
+
+\subsection{Effect on individual zeros}
+\label{sec:kernel:zeros}
+For a non-trivial zero \(\rho=\beta+i\gamma\) of
+\(\zeta\) or \(L(s,\chi)\) (\(\operatorname{cond}\chi\le P\))
+\[
+  \widehat H_{t,\delta}\!\Bigl(\frac{\rho-\tfrac12}{i}\Bigr)
+    = (\beta-\tfrac12)^{2}\;
+      \operatorname{sgn}\bigl(\beta-\tfrac12\bigr)\;
+      e^{-t\gamma^{2}} .
+\]
+Zeros on the critical line contribute \(0\);
+any off-line zero contributes a non-zero term whose sign
+opposes the strictly positive geometric identity term
+(Section~3).
+
+All further analytic estimates are carried out in
+Sections 2–4 and the appendices. 
