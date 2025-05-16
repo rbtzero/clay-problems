@@ -4,9 +4,9 @@ open Lake DSL
 package clay_problems where
   -- Additional compiler options can go here
 
--- Pull in mathlib4 exactly matching Lean 4.19.0
+-- Pull in mathlib4 snapshot matching Lean 4.5.0
 require mathlib from git
-  "https://github.com/leanprover-community/mathlib4" @ "v4.19.0"
+  "https://github.com/leanprover-community/mathlib4" @ "v4.5.0"
 
 -- Riemann–Hypothesis proof library
 lean_lib ClayRH where

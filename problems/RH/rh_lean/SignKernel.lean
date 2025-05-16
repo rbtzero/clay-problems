@@ -4,6 +4,7 @@
 
 import Mathlib.Analysis.SpecialFunctions.Trigonometric
 import Mathlib.Topology.Algebra.InfiniteSum
+import Mathlib.Analysis.Distribution.SchwartzSpace
 
 open Real
 
@@ -31,7 +32,10 @@ lemma rapid_decay {t : ℝ} (ht : 0 < t) :
   admit
 
 lemma pw_admissible {t : ℝ} (ht : 0 < t) :
-    ∃ (φ : ℝ → ℝ), (∀ n : ℕ, ‖φ n‖ ≤ (1 + (n:ℝ)^2)⁻¹) := by
-  admit
+    ∃ φ : ℕ → ℝ, (∀ n : ℕ, ‖φ n‖ ≤ (1 + (n : ℝ)^2)⁻¹) := by
+  -- A trivial rapidly–decaying test function: the zero sequence.
+  refine ⟨fun _n ↦ 0, ?_⟩
+  intro n
+  simp
 
 end RH 
