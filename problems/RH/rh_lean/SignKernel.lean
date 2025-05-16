@@ -24,7 +24,10 @@ noncomputable def Hhat (t ν : ℝ) : ℝ :=
 
 -- Rapid-decay lemma placeholder
 lemma rapid_decay {t : ℝ} (ht : 0 < t) :
-    ∀ n : ℕ, ∃ C, ∀ ν : ℝ, ‖(Hhat hδ t) ν‖ ≤ C / (1 + ν ^ 2) := by
+    ∀ n : ℕ, ∃ C : ℝ, ∀ ν : ℝ,
+      ‖(Hhat hδ t) ν‖ ≤ C / (1 + ν ^ 2) := by
+  intro n
+  -- Full analytic bound deferred.
   admit
 
 lemma pw_admissible {t : ℝ} (ht : 0 < t) :
