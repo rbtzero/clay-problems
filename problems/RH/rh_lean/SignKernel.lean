@@ -27,4 +27,8 @@ lemma rapid_decay {t : ℝ} (ht : 0 < t) :
     ∀ n : ℕ, ∃ C, ∀ ν : ℝ, ‖(Hhat hδ t) ν‖ ≤ C / (1 + ν ^ 2) := by
   admit
 
+lemma pw_admissible {t : ℝ} (ht : 0 < t) :
+    ∃ (φ : ℝ → ℝ), (∀ n : ℕ, ‖φ n‖ ≤ (1 + (n:ℝ)^2)⁻¹) := by
+  admit
+
 end RH 

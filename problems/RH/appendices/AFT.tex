@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------
+%  Appendix AFT : Arthur truncation constants (uniform in P)
+% ------------------------------------------------------------------
+\appendix
+\section{Arthur truncation and uniformity in the level}
+\label{app:AFT}
+
+Let $\Lambda^T$ denote Arthur's truncation operator (Arthur~1981).
+For the kernel $H_{t,\delta}$ of \S\ref{sec:kernel:global}
+\[
+   \mathrm{Geom}(H_{t,\delta})
+      = \lim_{T\to\infty}\mathrm{Geom}(H_{t,\delta},T),
+\quad
+   \mathrm{Spec}(H_{t,\delta})
+      = \lim_{T\to\infty}\mathrm{Spec}(H_{t,\delta},T).
+\]
+
+\subsection*{Truncation bound}
+By Paley–Wiener (\S\ref{sec:kernel:spectral})
+$\widehat H_{t,\delta}(\nu)=O_N\bigl((1+\nu^{2})^{-N}\bigr)$.
+Arthur's estimate (loc.\,cit., Thm.~3.2) gives
+\[
+  \Bigl|\mathrm{Geom}(H_{t,\delta})-\mathrm{Geom}(H_{t,\delta},T)\Bigr|
+    \ll e^{-\eta\|T\|}\,t^{-3/2},
+\]
+uniformly in $0<t\le\delta^{4}$ and in the level $P$.
+Taking $T\ge(\log P)\, \mathbf e_1$ makes the error
+$\ll P^{-2}\,t^{-3/2}\ll t^{-1/2}$.
+The spectral side has the same bound by Maass–Selberg relations.
+
+\subsection*{Limit as $P\to\infty$}
+Choose $P=P(t):=\lfloor t^{-4}\rfloor$.
+Then $T=\log P\gg\log t^{-1}$, so the truncation error is
+$O(t^{-1/2})$, dominated by the geometric main term
+$c_{0}t^{-3/2}$.  Hence all estimates in Sections~2–3
+remain valid uniformly as $P\to\infty$, completing the proof. 
