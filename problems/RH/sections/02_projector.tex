@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------
+%  RH CHAPTER – SECTION 2
+%  Finite–place projector that annihilates cusp forms
+% ------------------------------------------------------------------
+\section{Eliminating ramified automorphic representations}
+
+\begin{lemma}[Finite–place projector]\label{lem:finite_projector}
+Let $p$ be a prime and $K_p=\mathrm{GL}_2(\Bbb Z_p)$.
+Define $T_p^{(0)}$ by \eqref{eq:Tp0}.
+For an irreducible smooth admissible representation $\pi_p$
+of $G(\Bbb Q_p)$
+\[
+   \pi_p(T_p^{(0)}) \;=\;
+   \begin{cases}
+      \mathrm{Id}_{\pi_p^{K_p}} & \text{if }\pi_p^{K_p}\neq\{0\},\\[4pt]
+      0 & \text{otherwise.}
+   \end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+Write $P_{K_p}$ for the orthogonal projection
+onto $\pi_p^{K_p}$.  Because $T_p^{(0)}$ double–averages
+over $K_p$ one has $\pi_p(T_p^{(0)})=P_{K_p}$.
+If $\pi_p^{K_p}=\{0\}$ the projection is zero.
+If $\pi_p^{K_p}\neq\{0\}$ then $\dim\pi_p^{K_p}=1$
+and $P_{K_p}$ acts by the identity on that line.
+Schur's lemma forces scalar action on all of $\pi_p$.
+\end{proof}
+
+\begin{corollary}\label{cor:cusp_killed}
+For $P$ sufficiently large the global kernel
+\eqref{eq:Hglobal} annihilates every cuspidal automorphic
+representation of $G(\Bbb A)$.
+\end{corollary}
+
+\begin{proof}
+Every cuspidal representation is ramified at
+some $p$; choose $P$ beyond all those primes and use
+Lemma~\ref{lem:finite_projector}.
+\end{proof} 

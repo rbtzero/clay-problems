@@ -11,7 +11,7 @@ require mathlib from git
 -- Riemann–Hypothesis proof library
 lean_lib ClayRH where
   srcDir := "problems/RH/rh_lean"
-  globs := #[`Ledger]
+  globs := #[`Ledger, `SignKernel]
 
 -- Navier–Stokes stub
 lean_lib ClayNS where
